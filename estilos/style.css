@@ -175,9 +175,6 @@ ul{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         background: white;
     }
-    .lista-nav li{
-        
-    }
 
     .lista-resumo{
         display: grid;

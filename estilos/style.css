@@ -34,6 +34,7 @@ ul{
 }
 
 .nav-lateral{
+    z-index: 100;
     border-right: 1px solid #D9D9D9;
 }
 .lista-nav{
@@ -145,6 +146,50 @@ ul{
 }
 .info-att{
     background: grey;
+}
+
+.modal{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0,0, 0.5);
+}
+
+.conteudo-modal{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    width: 370px;
+    overflow: hidden;
+}
+.conteudo-modal header{
+    display: flex;
+    background: wheat;
+    padding: 20px;
+    gap: 15px;
+}
+.conteudo-modal .form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+.conteudo-modal .form label{
+    font-weight: bold;
+}
+.conteudo-modal .form input{
+    padding: 10px;
+    border-radius: 8px;
+}
+.conteudo-modal .form select{
+    padding: 10px;
+    border-radius: 8px;
 }
 
 @media (max-width: 600px) {

@@ -31,11 +31,11 @@
 
             <main>
                 <section class="header-main">
-                    
+
                 </section>
 
                 <section class="conteudo-resumo">
-                    
+
                     <ul class="lista-resumo">
                         <li class="card-resumo">
                             <i class="fa-solid fa-house fa-2xl"></i>
@@ -74,7 +74,7 @@
                 <section class="conteiner-casas">
                     <h2>Casas</h2>
                     <ul class="lista-casas">
-                    <!--<li class="card-casa">
+                        <!--<li class="card-casa">
                             <div class="sec-head-card">
                                 <i class="fa-solid fa-house-chimney fa-2xl"></i>
                                 <span class="head-status">
@@ -89,11 +89,46 @@
                                 <button class="info-att">Atualizar info</button>
                             </div>
                         </li>-->
-                        
+
                     </ul>
-                    <button class="btn-add-casa"><i class="fa-solid fa-circle-plus" style="color: rgb(255, 255, 255);"></i>Adicionar casa</button>
+                    <button class="btn-add-casa" onclick="addCasa()"><i class="fa-solid fa-circle-plus"
+                            style="color: rgb(255, 255, 255);"></i>Adicionar casa</button>
                 </section>
             </main>
+            <div class="modal">
+                <div class="conteudo-modal">
+                    <header>
+                        <i class="fa-solid fa-house fa-2xl icons pendente"></i>
+                        <div>
+                            <h1>Nova casa</h1>
+                            <p>Preencha os dados</p>
+                        </div>
+                    </header>
+                    <div class="form">
+                        <label for="">Casa:</label>
+                        <input type="text" placeholder="Ex: Casa 05" class="input-nome">
+                        <label for="">Morador:</label>
+                        <input type="text" placeholder="Ex: João" class="input-morador">
+                        <label for="">Valor aluguel:</label>
+                        <input type="number" placeholder="Ex: 500" class="input-valor">
+                        <label for="">Pagamento:</label>
+                        <select name="" id="statusCasa">
+                            <option value="pago">Pago</option>
+                            <option value="atrasado">Atrasado</option>
+                            <option value="pendente">Pendente</option>
+                        </select>
+                        <label for="">Disponibilidade:</label>
+                        <select name="" id="situacaoCasa">
+                            <option value="Disponivel">Disponivel</option>
+                            <option value="Oculpado">Oculpado</option>
+                        </select>
+                        <div>
+                            <button onclick="criarCasa()">Salvar casa</button>
+                            <button>Cancelar</button>
+                        </div> 
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

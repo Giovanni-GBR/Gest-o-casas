@@ -96,7 +96,7 @@
                 </section>
             </main>
             <div class="modal">
-                <div class="conteudo-modal">
+                <div class="conteudo-modal form-modal">
                     <header>
                         <i class="fa-solid fa-house fa-2xl icons pendente"></i>
                         <div>
@@ -124,8 +124,60 @@
                         </select>
                         <div>
                             <button onclick="criarCasa()">Salvar casa</button>
-                            <button>Cancelar</button>
+                            <button onclick="fecharModal()">Cancelar</button>
                         </div> 
+                    </div>
+                </div>
+                <div class="conteudo-modal info-modal">
+                    <header>
+                        <i class="fa-solid fa-house fa-2xl icons pago"></i>
+                        <div>
+                            <h1 class="titulo-info">Casa 01</h1>
+                            <p>Informaçoes</p>
+                        </div>
+                    </header>
+                    <div>
+                        <section class="info-cards">
+                            <div class="info-morador-card card-info-detail">
+                                <i class="fa-solid fa-user fa-2xl icons pendente"></i>
+                                <span>
+                                    <p>morador:</p>
+                                    <p class="nome-morador">Giovanni</p>
+                                </span>
+                            </div>
+                            <div class="card-info-detail">
+                                <i class="fa-solid fa-dollar-sign fa-2xl icons pago"></i>
+                                <span>
+                                    <p>aluguel:</p>
+                                    <p class="valor-aluguel">350</p>
+                                </span>
+                            </div>
+                            <div class="card-info-detail">
+                                <i class="fa-solid fa-calendar-days fa-2xl icons pendente"></i>
+                                <span>
+                                    <p>vencimento</p>
+                                    <p class="dia-vencimento">dia 10</p>
+                                </span>
+                            </div>
+                            <div class="card-info-detail">
+                                <i class="fa-solid fa-door-open fa-2xl icons pago"></i>
+                                <span>
+                                    <p>situacão</p>
+                                    <p class="situacao-info">Alugada</p>
+                                </span>
+                            </div>
+                            <div class="card-info-detail">
+                                <i class="fa-brands fa-cc-amazon-pay fa-2xl icons atrasado"></i>
+                                <span>
+                                    <p>status</p>
+                                    <p class="status-info">pago</p>
+                                </span>
+                            </div>
+                        </section>
+                        <div class="btns-modal">
+                            <button onclick="atualizarPagamento()">Atualizar pagamento</button>
+                            <button onclick="fecharModal()">Fechar</button>
+                        </div>
                     </div>
                 </div>
             </div>

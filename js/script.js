@@ -1,4 +1,6 @@
 const modal = document.querySelector(".modal")
+const modalInfo = document.querySelector(".info-modal")
+const modalAddCasa = document.querySelector(".form-modal")
 const btnAddCasa = document.querySelector(".btn-add-casa")
 
 let totalCasas = 0
@@ -43,6 +45,8 @@ const casas = [
 
 btnAddCasa.addEventListener("click", () => {
     modal.style.display = "flex"
+    modalInfo.style.display = "none"
+    modalAddCasa.style.display = "flex"
 })
 
 function atualizarResumo() {
@@ -84,6 +88,10 @@ function criarCasa() {
     
 }
 
+function fecharModal() {
+    modal.style.display = "none"
+}
+
 function atualizarCasas() {
     const listaCasas = document.querySelector(".lista-casas")
     
@@ -93,6 +101,7 @@ function atualizarCasas() {
         
         let li = document.createElement("li")
         li.classList.add("card-casa")
+        li.dataset.id = casa.id
 
         li.innerHTML = `<div class="sec-head-card ">
                             <i class="fa-solid fa-house-chimney fa-2xl icons ${casa.status}"></i>
@@ -107,6 +116,30 @@ function atualizarCasas() {
                             <button class="info-det">Ver detalhes</button>
                             <button class="info-att">Atualizar info</button>
                         </div>`
+
+        li.addEventListener("click", () => {
+            const id = Number(li.dataset.id)
+            const casaEncotrada = casas.find(casa => casa.id === id)
+            
+            const cardHeader = document.querySelector(".titulo-info")
+            const cardMorador = document.querySelector(".nome-morador")
+            const cardAluguel = document.querySelector(".valor-aluguel")
+            const cardVencimento = document.querySelector(".dia-vencimento")
+            const cardSituacao = document.querySelector(".situacao-info")
+            const cardStatus = document.querySelector(".status-info")
+
+            cardHeader.textContent = casaEncotrada.nome
+            cardMorador.textContent = casaEncotrada.morador
+            cardAluguel.textContent = casaEncotrada.aluguel + "R$"
+            
+            cardSituacao.textContent = casaEncotrada.situacao
+            cardStatus.textContent = casaEncotrada.status
+
+            modal.style.display = "flex"
+            modalInfo.style.display = "flex"
+            modalAddCasa.style.display = "none"
+        })
+        
         listaCasas.appendChild(li)
     })
 }

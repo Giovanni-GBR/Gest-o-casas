@@ -192,6 +192,43 @@ ul{
     border-radius: 8px;
 }
 
+.info-cards{
+    padding: 10px;
+}
+.card-info-detail{
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid;
+    gap: 10px;
+    
+}
+.card-info-detail .icons{
+    display: flex;
+    justify-content: center;
+    width: 35px;
+}
+.card-info-detail span p {
+    color: gray;
+    font-size: 15px;
+    font-weight: 600;
+}
+.btns-modal{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+}
+.btns-modal button{
+    padding: 10px;
+    border-radius: 8px;
+}
+.form-modal{
+    display: none;
+}
+.info-modal{
+    display: flex;
+}
+
 @media (max-width: 600px) {
     .header-site{
         background: #3D7DB8;
